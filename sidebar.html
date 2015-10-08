@@ -1,0 +1,20 @@
+<!-- Welcome Message -->
+
+<div class="well text-center">
+	<p class="lead">
+		Random Thoughts <img src="thought-cloud-icon.png"  style="width:30px;height:30px" alt="">
+	</p>
+	<p>Where you can post just about anything and whatever is on your mind!
+	</p>
+</div>
+
+<!-- Latest Posts -->
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Recent Post</h4>
+    </div>
+    <ul class="list-group" ng-repeat="post in posts | limitTo: -5 | orderBy: 'id':true">
+        <li class="list-group-item"><a ui-sref="post({id: post.id})">{{post.title}}</a></li>
+    </ul>
+</div>

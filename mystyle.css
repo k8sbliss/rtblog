@@ -1,0 +1,30 @@
+body {
+	margin-top: 75px;
+	background-image: url(clouds.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color:#464646;
+	opacity: .80;   
+}
+
+
+footer {
+	margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+	.group2 {
+		text-align: right;
+	}
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid;
+    margin: 1em 0;
+    padding: 0; 
+}

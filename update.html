@@ -1,0 +1,39 @@
+
+	<div class="container">
+		<h1><img src="thought-cloud-icon.png"  style="width:30px;height:30px" alt=""> Update Post</h1>
+
+		<hr>
+
+		<div class="contact-form">
+			<form name="updateForm" ng-submit="submitForm(updateForm.$valid)"class="form-horizontal col-md-8" role="form" novalidate>
+
+			  <div class="form-group">
+				<label for="name" class="col-md-2">Name</label>
+				<div class="col-md-10">
+			    	<input type="text" class="form-control" id="name" ng-model="singleEntry.author" maxlength="30" required>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="subject" class="col-md-2">Subject</label>
+			    <div class="col-md-10">
+			    	<input type="subject" class="form-control" id="subject" ng-model="singleEntry.title" maxlength="50" required>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="message" class="col-md-2">Message</label>
+			    <div class="col-md-10">
+			    	<textarea class="form-control" id="message" ng-model="singleEntry.body" maxlength="300" required></textarea>
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			  	<div class="col-md-12 text-right">
+			  		<button type="submit" class="btn btn-md btn-primary" ng-disabled="entryForm.$invalid">Update</button>
+			  		<a ui-sref="posts"><button type="submit" class="btn btn-md btn-primary" >Cancel</button></a>
+			  	</div>
+			  </div>
+			</form>	
+		</div>
+	</div>

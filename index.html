@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Thoughts</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel=stylesheet href="mystyle.css">
+</head>
+
+<body ng-app="app">
+
+<!-- NAVIGATION -->
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">           
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="posts" class="navbar-brand"><span class="glyphicon glyphicon-cloud" aria-hidden="true"> RandomThoughts</span></a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <form class="navbar-form navbar-right" role="search">
+                  <div class="form-group">
+                    <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                  </div>
+                  
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="posts">Posts</a></li>
+                    <li><a ui-sref="compose">Submit Post</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+        <div class="container">
+            <hr />
+            <p class="text-center">Copyright &copy; <a href="http://k8sbliss.com">K8sBliss</a> 2015. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="services.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

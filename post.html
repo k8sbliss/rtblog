@@ -1,0 +1,21 @@
+ 
+<!-- list of posts -->
+<article class="well well-sm">
+    <h3>{{post.title}}</h3>
+ 
+    <div class="row">
+
+        <div class="group1 col-sm-6 col-md-6">
+            <span class="glyphicon glyphicon-user">&nbsp;{{post.author}}&nbsp;</span>                            
+        </div>
+
+        <div class="group2 col-sm-6 col-md-6">
+            <a ui-sref="update({id: post.id})"><span class="glyphicon glyphicon-pencil">&nbsp;</span></a>
+            <span class="glyphicon glyphicon-trash" ng-click="delete(post.id)"></span>
+        </div>
+
+    </div>
+    <hr>
+    <p>{{post.body}}</p>
+ 
+</article>
