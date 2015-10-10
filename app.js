@@ -64,7 +64,7 @@ app.controller('mainController', function($scope, svc) {
     //vars for posts paging
     $scope.pageSize = 5;
     $scope.currentPage = 0;
-    $scope.orderBy = "-id";
+    $scope.orderBy = "-objectId";
     
     $scope.numberOfPages = function(){
         return Math.ceil($scope.ct/$scope.pageSize);                
@@ -72,7 +72,7 @@ app.controller('mainController', function($scope, svc) {
 
     //get all data from api
     svc.get().then(function(data){
-            $scope.posts = data.data;
+            $scope.posts = data.data.results;
             $scope.ct = $scope.posts.length;
     });
 
@@ -81,7 +81,7 @@ app.controller('mainController', function($scope, svc) {
     $scope.delete = function(id){
         svc.delete(id).then(function(){
             $scope.posts.forEach(function(el,idx){
-                if(el.id === id){
+                if(el.objectId === id){
                     $scope.posts.splice(idx, 1);
                 }
             });

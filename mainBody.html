@@ -2,7 +2,7 @@
  
 <!-- list of posts -->
 <article ng-repeat="post in filteredPosts = (posts | filter: search) | orderBy: orderBy | startFrom:currentPage*pageSize | limitTo:pageSize" class="well well-sm">
-    <a ui-sref="post({id: post.id})"><h3>{{post.title}}</h3></a>
+    <a ui-sref="post({id: post.objectId})"><h3>{{post.title}}</h3></a>
  
     <div class="row">
 
@@ -11,8 +11,8 @@
         </div>
 
         <div class="group2 col-sm-6 col-md-6">
-            <a ui-sref="update({id: post.id})"><span class="glyphicon glyphicon-pencil">&nbsp;</span></a>
-            <span class="glyphicon glyphicon-trash" ng-click="delete(post.id)"></span>
+            <a ui-sref="update({id: post.objectId})"><span class="glyphicon glyphicon-pencil">&nbsp;</span></a>
+            <span class="glyphicon glyphicon-trash" ng-click="delete(post.objectId)"></span>
         </div>
 
     </div>
